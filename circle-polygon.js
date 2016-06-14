@@ -2,7 +2,7 @@ const circlePolygon = (m, a, b) => {
   const A = a.shape;
   const B = b.shape;
   const center = B.u.transpose().muli(a.position.sub(b.position));
-  let separation = -Number.MAX_VALUE;
+  let separation = -3.4028235e+38;
   let faceNormal = 0;
   for (let i = 0; i < B.vertices.length; ++i) {
     let s = B.normals[i].dot(center.sub(B.vertices[i]));
